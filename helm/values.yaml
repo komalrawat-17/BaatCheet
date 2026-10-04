@@ -1,0 +1,21 @@
+replicaCount: 2
+
+image:
+  repository: baatcheet-backend
+  pullPolicy: IfNotPresent
+  tag: "1.0.0"
+
+service:
+  type: ClusterIP
+  port: 8000
+
+ingress:
+  enabled: true
+  className: nginx
+  annotations:
+    nginx.org/websocket-services: "baatcheet-backend"
+  hosts:
+    - host: baatcheet.local
+      paths:
+        - path: /
+          pathType: Prefix
