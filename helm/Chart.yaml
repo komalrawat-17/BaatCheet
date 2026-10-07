@@ -1,6 +1,0 @@
-apiVersion: v2
-name: baatcheet
-description: Helm chart for BaatCheet real-time chat infrastructure
-type: application
-version: 1.0.0
-appVersion: "1.0.0"
